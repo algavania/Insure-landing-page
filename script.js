@@ -30,5 +30,15 @@ window.addEventListener('resize', check_resize => {
         section.style.display = 'block';
         footer.style.display = 'block';
         img_toggle.src = './images/icon-hamburger.svg';
+    } else if (!windowSize.matches && toggle_menu.checked) {
+        nav_menu.style.display = 'block';
+        section.style.display = 'none';
+        footer.style.display = 'none';
+        img_toggle.src = './images/icon-close.svg';
+    } else {
+        nav_menu.style.display = 'none';
+        section.style.display = 'block';
+        footer.style.display = 'block';
+        img_toggle.src = './images/icon-hamburger.svg';
     }
 });
